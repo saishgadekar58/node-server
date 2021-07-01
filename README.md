@@ -1,73 +1,4 @@
-# node-server
 
-
-1)Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
-
- 
-
-Example 1:
-
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Output: Because nums[0] + nums[1] == 9, we return [0, 1].
-
-////ans/////
-
-
-
-
--------method1---------
-a)const twoSum = (nums,target) => {
-    for(i=0;i<nums.length;i++){
-        for(j=i+1;j<nums.length;j++){
-            if(nums[j] == target - nums[i]){
-                return [i,j]
-            }
-        }
-    }
-}
-working
-
-----------method1 end-----
-
-
-
-
-
---------method 2----------
-
-b)const twoSum=(nums,target)=>{
-  
-    let map = new Map();
-   
-    for(var i = 0; i < nums.length; i++){
-        let cmp = target - nums[i]
-         map.set(nums[i],i)
-        if(map.has(cmp)){
-            p=map.get(cmp);
-            
-            if(i>0){
-            let k= [p, i]
-     
-            return k
-              
-            }
-         }
-           
-        }
-    }
-
-not working for nums=[3,3] or [3,4,2]
-
-----------method2 end-----
-
-
-
-///////q end//////
 
 
 
@@ -90,7 +21,7 @@ Output: [2,2]
 -------method1---------
 1)var intersect = function(nums1, nums2) {
   
-        // let s1=new Set(nums1).size;
+       
   
     
     let r=[];
