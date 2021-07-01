@@ -3,7 +3,6 @@ const path = require("path");
 // require("./db/conn");
 const hbs = require("hbs");
 const { registerPartials } = require("hbs");
-
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -24,7 +23,6 @@ app.use("/jq", express.static(__dirname, "../node_modules/jquery/dist"));
 app.set("view engine", "hbs");
 app.set("views", templatepath);
 hbs.registerPartials(partialpath);
-
 //routing
 app.get("/", (req, res) => {
   res.render("home");
