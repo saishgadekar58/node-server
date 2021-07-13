@@ -1,7 +1,11 @@
 h1 {
   color: red;
-  font-size: 29rem;
+  font-size: 1rem;
 }
 p {
   color: green;
+  font-size: 15rem;
+}
+body {
+  background-color: black;
 }
